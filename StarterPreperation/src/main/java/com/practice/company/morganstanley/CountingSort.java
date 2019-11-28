@@ -30,6 +30,7 @@ public class CountingSort {
 					s = s+ cc;
 				}
 				
+				
 			}
 		}
 		sc.close();
