@@ -27,11 +27,8 @@ public class CountingSort {
 				int cnt = entry.getValue();
 				char cc = entry.getKey();
 				for(int k =0; k<cnt; k++) {
-					
 					s = s+ cc;
 				}
-				
-				
 			}
 		}
 		sc.close();
