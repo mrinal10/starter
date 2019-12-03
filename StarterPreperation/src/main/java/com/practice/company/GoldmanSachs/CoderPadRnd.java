@@ -65,6 +65,7 @@ public class CoderPadRnd {
 			if(dictionaryMap.containsKey(c)) {
 				t = dictionaryMap.get(c);
 			}
+			
 			t += 1;
 			dictionaryMap.put(c, t);
 		}
