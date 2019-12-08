@@ -2,15 +2,6 @@ package com.prep.linkedlist;
 
 import java.util.Scanner;
 
-class LinkedListNode{
-	int value;
-	LinkedListNode next;
-	public LinkedListNode(int toAssignValue) {
-		value = toAssignValue;
-		next = null;
-	}
-}
-
 class LinkedL{
 	LinkedListNode root = null;
 	public LinkedL() {
