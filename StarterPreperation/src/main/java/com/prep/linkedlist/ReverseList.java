@@ -24,7 +24,6 @@ public class ReverseList {
 			cur = cur.next;
 		}
 		print(root);
-		System.out.println();
 		root = reverseList(root);
 		print(root);
 	}
@@ -35,5 +34,6 @@ public class ReverseList {
 			System.out.print(cur.value+" --> ");
 			cur = cur.next;
 		}
+		System.out.println();
 	}
 }
