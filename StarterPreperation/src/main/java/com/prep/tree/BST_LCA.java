@@ -1,5 +1,5 @@
 package com.prep.tree;
 
-public class LCA {
+public class BST_LCA {
 
 }
