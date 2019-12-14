@@ -28,8 +28,7 @@ public class MaximalMinimumValuePathII {
 		return list.get(list.size() - 1);
 	}
 
-	public void reachTarget(int[][] matrix, int row, int col, int trgtRow, 
-			int trgtCol, int minValueTillNow, List<point> visited) {
+	public void reachTarget(int[][] matrix, int row, int col, int trgtRow, int trgtCol, int minValueTillNow, List<point> visited) {
 		if (!isValidLocation(matrix, row, col)) {
 			return;
 		}
