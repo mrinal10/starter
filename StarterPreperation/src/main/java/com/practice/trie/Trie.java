@@ -5,20 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-class TrieNode {
-	boolean isEnd;
-	int numberOfChildren;
-	TrieNode[] children;
-
-	TrieNode(int childCnt) {
-		isEnd = false;
-		numberOfChildren = childCnt;
-		children = new TrieNode[26];
-		for (int i = 0; i < childCnt; i++) {
-			children[i] = null;
-		}
-	}
-}
 
 public class Trie {
 	static List<String> allMatchedStrings;
