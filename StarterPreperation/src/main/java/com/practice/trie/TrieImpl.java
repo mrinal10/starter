@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class Trie {
+public class TrieImpl {
 	static List<String> allMatchedStrings;
 	static TrieNode rootOfTree;
 
-	Trie(TrieNode root) {
+	TrieImpl(TrieNode root) {
 		rootOfTree = root;
 	}
 
@@ -65,7 +65,7 @@ public class Trie {
 	public static void main(String[] args) {
 		String keys[] = { "the", "ant", "there", "answer", "any", "by", "bye", "their" };
 		TrieNode root = new TrieNode(26);
-		Trie t = new Trie(root);
+		TrieImpl t = new TrieImpl(root);
 
 		for (int i = 0; i < keys.length; i++) {
 			t.insert(keys[i]);
