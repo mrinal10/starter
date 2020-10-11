@@ -33,6 +33,7 @@ public class Contacts {
 			cur.wordsReached = cur.wordsReached+1;
 			cur = cur.children[index];
 		}
+		cur.wordsReached = cur.wordsReached+1;
 		cur.isEndOfWord = true;
 	}
 
