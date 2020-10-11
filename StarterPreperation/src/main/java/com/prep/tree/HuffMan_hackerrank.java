@@ -20,7 +20,7 @@ public class HuffMan_hackerrank {
         while (true) {
             if (temp.left == null && temp.right == null) {
                 curIndx = startIndex;
-                return temp.data; //correct
+                return 'c'; //correct
             }
             char c = path[startIndex];
             if (c == '0') {

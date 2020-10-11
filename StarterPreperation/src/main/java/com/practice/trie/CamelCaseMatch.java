@@ -30,6 +30,7 @@ class TrieDictionaryMatcher {
 		for (int i = 0; i < cArr.length; i++) {
 			
 		}
+		return false;
 		
 	}
 }

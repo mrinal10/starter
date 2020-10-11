@@ -9,4 +9,8 @@ public class CheckPrime {
 		
 		return number > 1 && IntStream.range(2, number).noneMatch(isDivisible);
 	}
+
+	public static void main(String[] args) {
+		isPrime(9);
+	}
 }

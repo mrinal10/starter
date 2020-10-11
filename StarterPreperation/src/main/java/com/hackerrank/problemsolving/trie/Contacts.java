@@ -1,10 +1,5 @@
 package com.hackerrank.problemsolving.trie;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
-
 public class Contacts {
 
 	private static String ADD = "add";
@@ -13,8 +8,9 @@ public class Contacts {
 	static class TrieNode {
 		TrieNode[] children = new TrieNode[26];
 		boolean isEndOfWord;
-
+		int wordsReached;
 		TrieNode() {
+			wordsReached = 0;
 			isEndOfWord = false;
 			for (int i = 0; i < 26; i++)
 				children[i] = null;
@@ -34,12 +30,13 @@ public class Contacts {
 			index = key.charAt(level) - 'a';
 			if (cur.children[index] == null)
 				cur.children[index] = new TrieNode();
+			cur.wordsReached = cur.wordsReached+1;
 			cur = cur.children[index];
 		}
 		cur.isEndOfWord = true;
 	}
 
-	static boolean search(String key) {
+	static int search(String key) {
 		int level;
 		int length = key.length();
 		int index;
@@ -48,15 +45,17 @@ public class Contacts {
 		for (level = 0; level < length; level++) {
 			index = key.charAt(level) - 'a';
 			if (cur.children[index] == null)
-				return false;
+				return 0;
 			cur = cur.children[index];
 		}
-		return (cur != null && cur.isEndOfWord);
+		if (cur != null){
+			return cur.wordsReached;
+		}
+		return 0;
 	}
 
 	static int[] contacts(String[][] queries) {
 		root = new TrieNode();
-
 		int answerLen = 0;
 		for (int i = 0; i < queries.length; i++) {
 			if (queries[i][0].contains(FIND)) {
@@ -64,23 +63,23 @@ public class Contacts {
 			}
 		}
 		int[] n = new int[answerLen];
-
 		int c = 0;
 		for (int i = 0; i < queries.length; i++) {
 			if (queries[i][0].contains(ADD)) {
 				insert(queries[i][1]);
 			} else if (queries[i][0].contains(FIND)) {
-				n[c] = search(queries[i][1]) ? 1 : 0;
+				n[c] = search(queries[i][1]);
 				c++;
 			}
 		}
 		return n;
 	}
 
-	private static final Scanner scanner = new Scanner(System.in);
-
-	public static void main(String[] args) throws IOException {
-		String[][] arr = {{"add", "hacker"},{"add","hack"},{"find", "hac"},{"find", "hak"}};
-		contacts(arr);
+	public static void main(String[] args) {
+		String[][] arr = {{"add", "s"}, {"find", "s"}};
+		int[] a = contacts(arr);
+		for(int i=0; i<a.length; i++){
+			System.out.println(a[i]);
+		} 
 	}
 }

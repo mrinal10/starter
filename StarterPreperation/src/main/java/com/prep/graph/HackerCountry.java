@@ -26,11 +26,11 @@ public class HackerCountry {
 	
 	private static String getValueForEachStartPoint(int startPoint, 
 			int endPoint, Map<Integer, List<Integer>> tollMap, int n, int tollSoFar, int numberOfHops) {
-		int tollCollected = tollSoFar+
+		int tollCollected = tollSoFar;
 		return "";
 	}
 	
 	public static void main(String[] args) {
-		
+		System.out.println("dknlkn");
 	} 	
 }

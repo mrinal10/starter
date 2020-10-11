@@ -15,7 +15,7 @@ public class InsertNodeAtSpecificPosition {
 	}
 
 	static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
-		
+		return null;
 	}
 
 }
