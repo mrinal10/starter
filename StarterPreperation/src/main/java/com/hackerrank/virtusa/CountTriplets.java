@@ -13,12 +13,13 @@ public class CountTriplets {
 			right.put(a.get(i), right.getOrDefault(a.get(i), 0) + 1);
 
 		for (int i = 0; i < lengthOfList; i++) {
-			long c1 = 0, c2 = 0;
+			long countOfSmallest = 0, countOfLargest = 0;
 			if (a.get(i) % r == 0)
-				c1 = left.getOrDefault(a.get(i) / r, 0);
+				countOfSmallest = left.getOrDefault(a.get(i) / r, 0);
 			right.put(a.get(i), right.getOrDefault(a.get(i), 0) - 1);
-			c2 = right.getOrDefault(a.get(i) * r, 0);
-			ans += c1 * c2;
+			countOfLargest = right.getOrDefault(a.get(i) * r, 0);
+			ans += countOfSmallest * countOfLargest;
+			
 			left.put(a.get(i), left.getOrDefault(a.get(i), 0) + 1);
 		}
 		return ans;
