@@ -77,6 +77,7 @@ public class Contacts {
 
 	public static void main(String[] args) {
 		String[][] arr = {{"add", "s"}, {"find", "s"}};
+		
 		int[] a = contacts(arr);
 		for(int i=0; i<a.length; i++){
 			System.out.println(a[i]);
