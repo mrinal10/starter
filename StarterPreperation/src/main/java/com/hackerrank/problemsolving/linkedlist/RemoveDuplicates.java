@@ -1,4 +1,6 @@
-public class RemoveDuplicates {
+package com.hackerrank.problemsolving.linkedlist;
+
+class RemoveDuplicates {
     class SinglyLinkedListNode {
              int data;
              SinglyLinkedListNode next;
