@@ -79,11 +79,11 @@ public class StreamTest {
 		System.out.println(sum);
 		
 		List<String> elements =
-				  Stream.of("a", "b", "c").filter(element -> element.contains("b"))
+				  Stream.of("obhdja", "ble", "c").filter(element -> element.contains("b"))
 		    .collect(Collectors.toList());
 		Optional<String> anyElement = elements.stream().findAny();
 		Optional<String> firstElement = elements.stream().findFirst();
 		
-		
+		System.out.println(anyElement+" ::: "+firstElement);
 	}
 }
