@@ -33,9 +33,10 @@ public class DivisorCount {
 		for(int i=0; i<n; i++) {
 			int curSum = 0;
 			for(int j=0; j<n && (j-i+1)<min; j++) {
-				curSum += arr[]
+				curSum += arr[j];
 			}
 		}
+		return min;
 	}
 
 	// Function to count the subarray with K primes

@@ -38,7 +38,7 @@ public class NQueen {
 		for (int i = 0; i < dim; i++) {
 			if (isSafe(i, col, board)) {
 				board[i][col] = 1;
-				if (nQnUtil(board, col + 1) == true) {
+				if (nQnUtil(board, col + 1)) {
 					return true;
 				}
 				board[i][col] = 0;
