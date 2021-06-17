@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mrinal>
+	<baseel newVak = "opi">
+		<testElement value="100">This is Test</testElement>
+		<testElement11 testValue="109">This is Test</testElement11>
+	</baseel>
+</Mrinal>
